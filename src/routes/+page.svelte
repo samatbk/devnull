@@ -9,7 +9,7 @@ Mutfak cogu insan icin pek bir anlam ifade etmez ama yemek yapmaya asik insanlar
 Yazilim kulubu uyeleri olarak yazilim asigi insanlar icin mutfaklarini hazirlamak istiyoruz.
 Yazilim kulubunde sizlerle ayni heyecani yasayan insanlarla tanisma firsatiniz olacak.
 Hem bir seyler ogrenecek hem de diger uyelere birseyler ogreteceksiniz.
-Kulubumuze katilmak istiyorsaniz tek yapmaniz gereken <a href={discord_link}>discord sunucumuz</a>a katilmak.
+Kulubumuze katilmak istiyorsaniz tek yapmaniz gereken <a href={discord_link}>discord sunucumuza</a> katilmak.
 </p>
 
 <style>
@@ -18,8 +18,8 @@ Kulubumuze katilmak istiyorsaniz tek yapmaniz gereken <a href={discord_link}>dis
  }
 
  a {
-     color: #282828;
-     background-color: #b8bb26;
+     color: var(--bg-0);
+     background-color: var(--green-1);
      font-weight: bolder;
      padding: 3px;
      text-decoration: none;
@@ -27,7 +27,7 @@ Kulubumuze katilmak istiyorsaniz tek yapmaniz gereken <a href={discord_link}>dis
  }
 
  a:hover {
-     color: #b8bb26;
-     background-color: #504945;
+     color: var(--green-1);
+     background-color: var(--bg-2);
  }
 </style>

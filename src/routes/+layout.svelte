@@ -1,10 +1,25 @@
 <script>
  import Logo from "$lib/components/Logo.svelte"
 
- import { links } from "$lib/store.js"
+ import MoonIcon from "svelte-remixicon/RiMoonFill.svelte"
+ import SunIcon from "svelte-remixicon/RiSunFill.svelte"
+
+ import { links, theme } from "$lib/store.js"
  import { commit_id, commit_date } from "$lib/commit-info.js"
 
+ function change_theme() {
+     theme.update(current_theme => current_theme === "dark" ? "light" : "dark");
+ }
+
 </script>
+
+<button on:click={change_theme} id="theme-selector">
+{#if $theme == "dark"}
+    <SunIcon/>
+{:else}
+    <MoonIcon/>
+{/if}
+</button>
 
 <Logo/>
 
@@ -25,25 +40,47 @@
 
 <svelte:head>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/{$theme}-theme.css">
 </svelte:head>
 
 <style>
 
  a {
-    color: #b8bb26;
+     color: var(--green-1);
      margin: 10px;
      font-size: 24px;
  }
 
  a:hover {
-    color: #fabd2f;
+    color: var(--yellow-1);
  }
 
  #commit, #last-updated {
-     color: #7c6f64;
+     color: var(--bg-4);
  }
 
  #commit > a {
      font-size: 20px;
+ }
+
+ #theme-selector {
+    background-color: var(--fg-0);
+    color: var(--bg-0);
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    right: 15px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #theme-selector:hover {
+   color: var(--bg-2);
  }
 </style>

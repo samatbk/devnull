@@ -1,0 +1,44 @@
+:where(html) {
+    /* Gruvbox Light Color Scheme */
+    /* https://github.com/morhetz/gruvbox?tab=readme-ov-file#light-mode-1 */
+
+    --bg-0-soft: #f2e5bc;
+    --bg-0-hard: #f9f5d7;
+
+    --bg-0: #fbf1c7;
+    --bg-1: #ebdbb2;
+    --bg-2: #d5c4a1;
+    --bg-3: #bdae93;
+    --bg-4: #a89984;
+
+    --fg-0: #282828;
+    --fg-1: #3c3836;
+    --fg-2: #504945;
+    --fg-3: #665c54;
+    --fg-4: #7c6f64;
+
+    --gray-0: #7c6764;
+    --gray-1: #928374;
+    --gray-2: #928374;
+
+    --red-0: #cc241d;
+    --red-1: #9d0006;
+
+    --green-0: #98971a;
+    --green-1: #79740e;
+
+    --yellow-0: #d79921;
+    --yellow-1: #b57614;
+
+    --blue-0: #458588;
+    --blue-1: #076678;
+
+    --purple-0: #b16286;
+    --purple-1: #8f3f71;
+
+    --aqua-0: #689d6a;
+    --aqua-1: #427b58;
+
+    --orange-0: #d65d0e;
+    --orange-1: #af3a03;
+}

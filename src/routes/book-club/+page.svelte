@@ -14,8 +14,8 @@
      text-align: left;
      margin: 20px;
      font-size: 24px;
-     background-color: #1d2021;
-     border-left: 7px solid #8ec07c;
+     background-color: var(--bg-0-hard);
+     border-left: 7px solid var(--aqua-1);
      padding: 5px;
  }
 </style>

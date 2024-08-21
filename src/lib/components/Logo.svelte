@@ -40,7 +40,8 @@ onMount(() => {
        #logo {
            transform: scale(1.2);
            display: block;
-           margin: 40px auto;
+           margin: 20px auto;
+           margin-bottom: 30px;
            transition: filter 0.5s ease;
        }
 

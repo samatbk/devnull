@@ -1,0 +1,44 @@
+:where(html) {
+    /* Gruvbox Dark Color Scheme */
+    /* https://github.com/morhetz/gruvbox?tab=readme-ov-file#dark-mode-1 */
+
+    --bg-0-soft: #32302f;
+    --bg-0-hard: #1d2021;
+
+    --bg-0: #282828;
+    --bg-1: #3c3836;
+    --bg-2: #504945;
+    --bg-3: #665c54;
+    --bg-4: #7c6f64;
+
+    --fg-0: #fbf1c7;
+    --fg-1: #ebdbb2;
+    --fg-2: #d5c4a1;
+    --fg-3: #bdae93;
+    --fg-4: #a89984;
+
+    --gray-0: #a89984;
+    --gray-1: #928374;
+    --gray-2: #928374;
+
+    --red-0: #cc241d;
+    --red-1: #fb4934;
+
+    --green-0: #98971a;
+    --green-1: #b8bb26;
+
+    --yellow-0: #d79921;
+    --yellow-1: #fabd2f;
+
+    --blue-0: #458588;
+    --blue-1: #83a598;
+
+    --purple-0: #b16286;
+    --purple-1: #d3869b;
+
+    --aqua-0: #689d6a;
+    --aqua-1: #8ec07c;
+
+    --orange-0: #d65d0e;
+    --orange-1: #fe8019;
+}
