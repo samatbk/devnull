@@ -1,5 +1,9 @@
 <script>
  import Logo from "$lib/components/Logo.svelte"
+
+ import { links } from "$lib/store.js"
+ import { commit_id, commit_date } from "$lib/commit-info.js"
+
 </script>
 
 <Logo/>
@@ -11,10 +15,13 @@
     <a href="/events">etkinlikler</a>
     <a href="/book-club">kitap_kulubu</a>
     <a href="/about">hakkinda</a>
-    <a href="#discord">discord</a>
+    <a href="/projects">projeler</a>
 </nav>
 
 <slot></slot>
+
+<p id="commit">Latest commit: <a href="{links.github}/commit/{commit_id}">{commit_id.slice(0, 8)}</a></p>
+<p id="last-updated">Last updated: {commit_date}</p>
 
 <svelte:head>
     <link rel="stylesheet" href="/css/index.css">
@@ -32,4 +39,11 @@
     color: #fabd2f;
  }
 
+ #commit, #last-updated {
+     color: #7c6f64;
+ }
+
+ #commit > a {
+     font-size: 20px;
+ }
 </style>

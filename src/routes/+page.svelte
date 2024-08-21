@@ -1,6 +1,7 @@
 <script>
+ import { links } from "$lib/store.js"
 
- const discord_link = "https://discord.gg/r2AdJQmTSS"
+ const discord_link = links.discord
 
 </script>
 <p>
@@ -8,7 +9,7 @@ Mutfak cogu insan icin pek bir anlam ifade etmez ama yemek yapmaya asik insanlar
 Yazilim kulubu uyeleri olarak yazilim asigi insanlar icin mutfaklarini hazirlamak istiyoruz.
 Yazilim kulubunde sizlerle ayni heyecani yasayan insanlarla tanisma firsatiniz olacak.
 Hem bir seyler ogrenecek hem de diger uyelere birseyler ogreteceksiniz.
-    Kulubumuze katilmak istiyorsaniz tek yapmaniz gereken <a href={discord_link}>discord sunucumuz</a>a katilmak.
+Kulubumuze katilmak istiyorsaniz tek yapmaniz gereken <a href={discord_link}>discord sunucumuz</a>a katilmak.
 </p>
 
 <style>
