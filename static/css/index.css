@@ -1,0 +1,18 @@
+* {
+    font-family: 'Iosevka Web';
+    font-size: 20px;
+}
+
+:root {
+    background-color: #282828;
+    color: #ebdbb2;
+    margin: 10px 100px;
+    text-align: center;
+}
+
+strong {
+    color: #fabd2f;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #1d2021;
+}
