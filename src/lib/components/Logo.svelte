@@ -53,7 +53,7 @@ onMount(() => {
 
        @media (max-width: 768px) {
            #logo {
-               width: 200px;
+               width: 250px;
            }
        }
       </style>

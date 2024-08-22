@@ -147,4 +147,10 @@
         display: none;
     }
  }
+
+ @media (min-width: 769px) {
+    #sidebar-button {
+        display: none;
+    }
+ }
 </style>
