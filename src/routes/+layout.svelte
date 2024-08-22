@@ -20,7 +20,7 @@
  });
 
  $: url = $page.route.id;
- $: is_blog_post = url != "/blog" && url.includes("blog");
+ $: is_blog_post = url && url != "/blog" && url.includes("blog");
 
 </script>
 
@@ -46,7 +46,7 @@
     <a href="/events">etkinlikler</a>
     <a href="/book-club">kitap_kulubu</a>
     <a href="/about">hakkinda</a>
-    <a href="/projects">projeler</a>
+    <!-- <a href="/projects">projeler</a> -->
 </nav>
 
 <slot></slot>
