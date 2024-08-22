@@ -15,12 +15,12 @@ function toggle_sidebar() {
     <p id="cool-text">Yazilim kulubu</p>
     </div>
     <hr>
-    <a href="/" class="sidebar-link">mutfak</a>
-    <a href="/weekly" class="sidebar-link">haftalik_bulten</a>
-    <a href="/blog" class="sidebar-link">blog</a>
-    <a href="/events" class="sidebar-link">etkinlikler</a>
-    <a href="/book-club" class="sidebar-link">kitap-kulubu</a>
-    <a href="/about" class="sidebar-link">hakkinda</a>
+    <a href="/" class="sidebar-link" on:click={toggle_sidebar}>mutfak</a>
+    <a href="/weekly" class="sidebar-link" on:click={toggle_sidebar}>haftalik_bulten</a>
+    <a href="/blog" class="sidebar-link" on:click={toggle_sidebar}>blog</a>
+    <a href="/events" class="sidebar-link" on:click={toggle_sidebar}>etkinlikler</a>
+    <a href="/book-club" class="sidebar-link" on:click={toggle_sidebar}>kitap-kulubu</a>
+    <a href="/about" class="sidebar-link" on:click={toggle_sidebar}>hakkinda</a>
 
 </div>
 {/if}
