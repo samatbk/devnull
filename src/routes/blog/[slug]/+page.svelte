@@ -1,12 +1,12 @@
 <script>
 import ArrowLeft from "svelte-remixicon/RiArrowLeftFill.svelte"
+import { pretty_date } from "$lib/date.js"
 
 export let data;
 
 </script>
 
 <svelte:head>
-    <!-- <link href="http://a-dma.github.io/gruvbox-css/gruvbox-dark-medium.min.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-heNHQxAqmr9b5CZSB7/7NSC96qtb9HCeOKomgLFv9VLkH+B3xLgUtP73i1rM8Gpmfaxb7262LFLJaH/hKXyxyA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
 
@@ -67,9 +67,37 @@ export let data;
 	}
 
     h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
+    .tags {
+        display: flex;
+        align-items: center;
+    }
+
+    .tag {
+        color: var(--fg-1);
+        background-color: var(--red-0);
+        padding: 3px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    #description {
+        color: var(--fg-3);
+        margin: 5px;
+    }
+
+    #date {
+        color: var(--fg-4);
+        margin: 5px;
+    }
+
+    #author {
+        color: var(--green-0);
+        text-decoration: underline;
+        cursor: pointer;
+    }
 </style>
 </svelte:head>
 
@@ -77,9 +105,14 @@ export let data;
 <div class="container">
 <a href="/blog"><ArrowLeft/>Geri Don</a>
 <h1>{data.meta.title}</h1>
-<p>{data.meta.description}</p>
-<p>{data.meta.date}</p>
-<p>{data.meta.tags}</p>
+<p>yazar: <span id="author">{data.meta.author}</span></p>
+<p id="description">{data.meta.description}</p>
+<p id="date">{pretty_date(data.meta.date)}</p>
+<div class="tags">
+{#each data.meta.tags as tag}
+    <p class="tag">#{tag}</p>
+{/each}
+</div>
 <hr>
 </div>
 <article class="markdown-body">

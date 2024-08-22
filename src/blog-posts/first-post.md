@@ -2,6 +2,7 @@
 title: First Post
 description: Description
 date: '2024-08-21'
+author: samatbk
 tags:
   - svelte
   - sveltekit

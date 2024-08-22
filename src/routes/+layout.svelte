@@ -1,5 +1,6 @@
 <script>
  import { page } from "$app/stores"
+ import { pretty_date_with_time } from "$lib/date.js"
 
  import Logo from "$lib/components/Logo.svelte"
  import Sidebar from "$lib/components/Sidebar.svelte"
@@ -64,8 +65,8 @@
 
 <slot></slot>
 
-<p id="commit">Latest commit: <a href="{links.github}/commit/{commit_id}">{commit_id.slice(0, 8)}</a></p>
-<p id="last-updated">Last updated: {commit_date}</p>
+<p id="commit">Son commit: <a href="{links.github}/commit/{commit_id}">{commit_id.slice(0, 8)}</a></p>
+<p id="last-updated">Son guncelleme tarihi: {pretty_date_with_time(commit_date)}</p>
 {/if}
 
 <svelte:head>
@@ -92,12 +93,15 @@
     color: var(--yellow-1);
  }
 
- #commit, #last-updated {
-     color: var(--bg-4);
+ #commit {
+     display: flex;
+     justify-content: center;
+     align-items: center;
  }
 
- #commit > a {
-     font-size: 20px;
+ #commit, #last-updated {
+     color: var(--bg-4);
+     margin: 0px;
  }
 
  #theme-selector {

@@ -1,3 +1,3 @@
 
-export const commit_id = "644b43c35dec0aae782a658592af38edfd92dd01";
-export const commit_date = "Thu Aug 22 19:56:29 2024 +0300";
+export const commit_id = "5718e68dc8a9a4cdccc0caeec6836a83af6a8774";
+export const commit_date = "Thu Aug 22 20:50:38 2024 +0300";

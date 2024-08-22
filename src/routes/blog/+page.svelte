@@ -1,6 +1,7 @@
 <script>
 import { onMount } from "svelte"
 import { goto } from "$app/navigation"
+import { pretty_date } from "$lib/date.js"
 
 export let data;
 
@@ -19,13 +20,30 @@ function go_to_post(slug) {
 {#each data.posts as post}
     <div class="blog-page" on:click={() => go_to_post(post.slug)}>
     <h2>{post.title}</h2>
+    <p>yazar: <span style="color: var(--green-0)">{post.author}</span></p>
     <p>{post.description}</p>
-    <p id="date">{post.date}</p>
-    <p>{post.tags}</p>
+    <p id="date">{pretty_date(post.date)}</p>
+    <div class="tags">
+    {#each post.tags as tag}
+        <p class="tag">#{tag}</p>
+    {/each}
+    </div>
 </div>
 {/each}
 </div>
 <style>
+ .tags {
+     display: flex;
+     align-items: center;
+ }
+
+ .tag {
+     color: var(--fg-1);
+     background-color: var(--red-0);
+     padding: 3px;
+     margin: 5px;
+ }
+
  .blog {
      margin: 20px;
  }
