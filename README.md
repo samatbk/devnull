@@ -1,6 +1,4 @@
-<p align="center">
-<img style="max-width: 400px;" src="logo.png" alt="logo"> 
-</p>
+<img src="logo.png" alt="Image Description" width="200" align="left" style="margin-right: 10px;">
 
 # Yazilim Kulubu
 
