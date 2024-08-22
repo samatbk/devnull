@@ -2,11 +2,14 @@
  import { page } from "$app/stores"
 
  import Logo from "$lib/components/Logo.svelte"
+ import Sidebar from "$lib/components/Sidebar.svelte"
 
  import MoonIcon from "svelte-remixicon/RiMoonFill.svelte"
  import SunIcon from "svelte-remixicon/RiSunFill.svelte"
 
- import { links, theme } from "$lib/store.js"
+ import MenuIcon from "svelte-remixicon/RiMenuFill.svelte"
+
+ import { links, theme, show_sidebar} from "$lib/store.js"
  import { commit_id, commit_date } from "$lib/commit-info.js"
 
  import { onMount, beforeUpdate } from "svelte"
@@ -15,12 +18,17 @@
      localStorage.setItem("theme", $theme);
  }
 
+ function toggle_sidebar() {
+     show_sidebar.update((state) => !state);
+ }
+
  beforeUpdate(() => {
      theme.update(() => localStorage.getItem("theme") || "dark");
  });
 
  $: url = $page.route.id;
  $: is_blog_post = url && url != "/blog" && url.includes("blog");
+
 
 </script>
 
@@ -34,10 +42,16 @@
 {/if}
 </button>
 
+<button id="sidebar-button" class={$show_sidebar ? "hide" : ""} on:click={toggle_sidebar}>
+    <MenuIcon/>
+</button>
+
 {#if is_blog_post}
     <slot/>
 {:else}
 <Logo/>
+
+<Sidebar/>
 
 <nav>
     <a href="/">mutfak</a>
@@ -46,7 +60,6 @@
     <a href="/events">etkinlikler</a>
     <a href="/book-club">kitap_kulubu</a>
     <a href="/about">hakkinda</a>
-    <!-- <a href="/projects">projeler</a> -->
 </nav>
 
 <slot></slot>
@@ -69,6 +82,10 @@
      color: var(--green-1);
      margin: 10px;
      font-size: 24px;
+ }
+
+ .hide {
+     display: none !important;
  }
 
  a:hover {
@@ -102,5 +119,32 @@
 
  #theme-selector:hover {
    color: var(--bg-2);
+ }
+
+ #sidebar-button {
+    background-color: var(--fg-0);
+    color: var(--bg-0);
+    position: fixed;
+    z-index: 99;
+    top: 15px;
+    left: 15px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #sidebar-button:hover {
+     color: var(--bg-1);
+ }
+
+ @media (max-width: 768px) {
+    nav {
+        display: none;
+    }
  }
 </style>

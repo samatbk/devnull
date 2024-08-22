@@ -7,3 +7,5 @@ export const links =
 };
 
 export const theme = writable("dark");
+
+export const show_sidebar = writable(false);

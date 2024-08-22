@@ -20,7 +20,7 @@ onMount(() => {
 
 </script>
 
-<svg viewBox="0 0 400 100" width="400" height="100" id="logo" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 400 100" id="logo" xmlns="http://www.w3.org/2000/svg">
       <style>
        #logo>text {
            transition: fill 1s ease-in-out;
@@ -38,6 +38,8 @@ onMount(() => {
        }
 
        #logo {
+           max-width: 400px;
+           max-height: 100px;
            transform: scale(1.2);
            display: block;
            margin: 20px auto;
@@ -47,6 +49,12 @@ onMount(() => {
 
        svg:hover {
            filter: invert(1);
+       }
+
+       @media (max-width: 768px) {
+           #logo {
+               width: 200px;
+           }
        }
       </style>
       <rect width="100%" height="100%" fill="#1d2021"  stroke-width="2"/>

@@ -1,6 +1,6 @@
 * {
     font-family: 'Iosevka Web';
-    font-size: 20px;
+    font-size: 24px;
 }
 
 :root {
@@ -8,6 +8,16 @@
     color: var(--fg-1);
     margin: 10px 100px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    :root {
+        margin: 10px;
+    }
+
+    * {
+        font-size: 20px;
+    }
 }
 
 strong {
