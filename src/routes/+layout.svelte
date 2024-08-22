@@ -1,4 +1,6 @@
 <script>
+ import { page } from "$app/stores"
+
  import Logo from "$lib/components/Logo.svelte"
 
  import MoonIcon from "svelte-remixicon/RiMoonFill.svelte"
@@ -7,11 +9,22 @@
  import { links, theme } from "$lib/store.js"
  import { commit_id, commit_date } from "$lib/commit-info.js"
 
+ import { onMount, beforeUpdate } from "svelte"
  function change_theme() {
      theme.update(current_theme => current_theme === "dark" ? "light" : "dark");
+     localStorage.setItem("theme", $theme);
  }
 
+ beforeUpdate(() => {
+     theme.update(() => localStorage.getItem("theme") || "dark");
+ });
+
+ $: url = $page.route.id;
+ $: is_blog_post = url != "/blog" && url.includes("blog");
+
 </script>
+
+<!-- <p>{url != "/blog" && url.includes("blog")}</p> -->
 
 <button on:click={change_theme} id="theme-selector">
 {#if $theme == "dark"}
@@ -21,6 +34,9 @@
 {/if}
 </button>
 
+{#if is_blog_post}
+    <slot/>
+{:else}
 <Logo/>
 
 <nav>
@@ -37,9 +53,13 @@
 
 <p id="commit">Latest commit: <a href="{links.github}/commit/{commit_id}">{commit_id.slice(0, 8)}</a></p>
 <p id="last-updated">Last updated: {commit_date}</p>
+{/if}
 
 <svelte:head>
+    {#if !is_blog_post}
     <link rel="stylesheet" href="/css/index.css">
+    {/if}
+
     <link rel="stylesheet" href="/css/{$theme}-theme.css">
 </svelte:head>
 
@@ -66,7 +86,7 @@
  #theme-selector {
     background-color: var(--fg-0);
     color: var(--bg-0);
-    position: absolute;
+    position: fixed;
     z-index: 99;
     top: 15px;
     right: 15px;
