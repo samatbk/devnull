@@ -1,4 +1,4 @@
-<h1>[[Burada haftalik bilgilendirmeler yayinlanacaktir]]</h1>
+<h1>[[Burada haftalık bilgilendirmeler yayinlanacaktır]]</h1>
 
 <style>
  h1 {

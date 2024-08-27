@@ -103,7 +103,7 @@ export let data;
 
 
 <div class="container">
-<a href="/blog"><ArrowLeft/>Geri Don</a>
+<a href="/blog"><ArrowLeft/>Geri Dön</a>
 <h1>{data.meta.title}</h1>
 <p>yazar: <span id="author">{data.meta.author}</span></p>
 <p id="description">{data.meta.description}</p>

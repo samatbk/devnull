@@ -1,5 +1,5 @@
 <p>
-    Yazilim kulubu 2024 yilinda uyelerin kendini gelistirebilecegi bir ortam olmasi amaciyla kurulmustur.
+    Yazılım kulübü 2024 yılında üyelerin kendini geliştirebileceği bir ortam olması amacıyla kurulmuştur.
 </p>
 
 <style>
