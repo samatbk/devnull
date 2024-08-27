@@ -1,4 +1,4 @@
-<h1>[[Burada kulubumuz tarafindan yapilan etkinliklere ulasabilirsiniz]]</h1>
+<h1>[[Burada kulübümüz tarafından yapılan etkinliklere ulaşabilirsiniz]]</h1>
 
 <style>
  h1 {

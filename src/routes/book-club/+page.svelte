@@ -1,7 +1,7 @@
 <h1>README - Okuma Kulubu</h1>
 
-<p id='info'>Okuma kulubumuzde duzenli araklilarla kitap okuyup bunlari tartisiyoruz.
-    Asagidaki programdan daha detayli bilgi edinebilirsiniz
+<p id='info'>Okuma kulübümüzde düzenli aralıklarla kitap okuyup bunları tartışıyoruz.
+    Aşağıdaki programdan daha detaylı bilgi edinebilirsiniz
 </p>
 
 <h1>[[Liste buraya eklenecektir]]</h1>

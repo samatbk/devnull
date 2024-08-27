@@ -5,7 +5,7 @@
 
 </script>
 <p>
-Kulubumuze katilmak istiyorsaniz tek yapmaniz gereken <wbr><a href={discord_link}>discord sunucumuza</a> katilmak.
+Kulübümüze katılmak istiyorsanız tek yapmanız gereken <wbr><a href={discord_link}>discord sunucumuza</a> katılmak.
 </p>
 
 <style>
