@@ -10,19 +10,19 @@ export let data;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css" integrity="sha512-heNHQxAqmr9b5CZSB7/7NSC96qtb9HCeOKomgLFv9VLkH+B3xLgUtP73i1rM8Gpmfaxb7262LFLJaH/hKXyxyA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
 
-
     body {
         background-color: var(--bg-0-soft);
         font-size: 20px;
     }
 
 	.markdown-body{
+        font-family: "Courier New", sans-serif !important;
 		box-sizing: border-box;
 		min-width: 200px;
 		max-width: 980px;
 		margin: 0 auto;
 		padding: 45px;
-        font-family: "Iosevka Web";
+        /* font-family: "Iosevka Web"; */
         background-color: var(--bg-0);
         color: var(--fg-0);
         font-size: 24px;
@@ -44,7 +44,7 @@ export let data;
 	}
 
     .container > a {
-        color: var(--green-1);
+        color: var(--green-1) !important;
         display: flex;
         justif-content: center;
         align-items: center;
@@ -54,9 +54,20 @@ export let data;
         color: var(--blue-1);
     }
 
-    .markdown-body > a {
+     a {
         color: var(--green-1) !important;
+        cursor: pointer;
+    }
 
+    blockquote {
+        background-color: var(--bg-1);
+        color: var(--fg-2) !important;
+        padding: 10px !important;
+        border-left: 4px solid var(--aqua-1) !important;
+    }
+
+    samp {
+        color: var(--fg-3);
     }
 
 	@media (max-width: 767px) {
@@ -76,8 +87,8 @@ export let data;
     }
 
     .tag {
-        color: var(--fg-1);
-        background-color: var(--red-0);
+        color: var(--bg-1);
+        background-color: var(--fg-0);
         padding: 3px;
         margin: 5px;
         cursor: pointer;
@@ -97,6 +108,15 @@ export let data;
         color: var(--green-0);
         text-decoration: underline;
         cursor: pointer;
+    }
+
+    h1::before,
+    h2::before,
+    h3::before,
+    h4::before,
+    h5::before,
+    h6::before {
+    content: "# ";
     }
 </style>
 </svelte:head>

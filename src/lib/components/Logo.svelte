@@ -20,24 +20,23 @@ onMount(() => {
 
 </script>
 
-<svg viewBox="0 0 400 100" id="logo" xmlns="http://www.w3.org/2000/svg">
-      <style>
-       #logo>text {
+    <style>
+       .logo>text {
            transition: fill 1s ease-in-out;
            -webkit-user-select: none;
            -moz-user-select: none;
            -ms-user-select: none;
            user-select: none;
        }
-       #logo>rect {
+       .logo>rect {
            transition: fill 1s ease-in-out, stroke 1s ease-in-out;
        }
 
-       #logo>rect:hover {
+       .logo>rect:hover {
            fill: #000;
        }
 
-       #logo {
+       .logo {
            max-width: 400px;
            max-height: 100px;
            transform: scale(1.2);
@@ -51,16 +50,35 @@ onMount(() => {
            filter: invert(1);
        }
 
+     #logo-small {
+         display: none;
+     }
+
        @media (max-width: 768px) {
-           #logo {
-               width: 250px;
+           #logo-big {
+               display: none;
+           }
+
+           #logo-small {
+               display: block;
            }
        }
-      </style>
+
+
+</style>
+<svg viewBox="0 0 400 100" class="logo" id="logo-big" xmlns="http://www.w3.org/2000/svg">
       <rect width="100%" height="100%" fill="#1d2021"  stroke-width="2"/>
       <rect width="100" height="100%" fill={colors[current_color]} />
       <circle cx="50" cy="50" r="40" fill="#000" />
   <text x="50" y="45" font-size="30px" font-weight="bolder" text-anchor="middle" fill={colors[current_color]}>/dev/</text>
   <text x="50" y="68" style="font-size: 28px;" font-weight="bolder" text-anchor="middle" fill={colors[current_color]}>null</text>
   <text x="200" y="50" dx="50" fill={colors[current_color]} text-anchor="middle" font-weight="bolder" style="font-size: 31px;" dominant-baseline="middle">Yazılım Kulübü</text>
+</svg>
+
+<svg viewBox="0 0 100 100" class="logo" id="logo-small" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#1d2021"  stroke-width="2"/>
+      <rect width="100" height="100%" fill={colors[current_color]} />
+      <circle cx="50" cy="50" r="40" fill="#000" />
+  <text x="50" y="45" font-size="30px" font-weight="bolder" text-anchor="middle" fill={colors[current_color]}>/dev/</text>
+  <text x="50" y="68" style="font-size: 28px;" font-weight="bolder" text-anchor="middle" fill={colors[current_color]}>null</text>
 </svg>
